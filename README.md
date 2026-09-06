@@ -177,13 +177,14 @@ Two things were tuned so the app is fast and cheap to run in a live conversation
 ## 6. Quick Start
 
 1. Install Python 3.10+.
-2. Create a virtual environment:
-   - Windows: `python -m venv .venv` then `.venv\\Scripts\\activate`
-   - macOS/Linux: `python3 -m venv .venv` then `source .venv/bin/activate`
-3. Install: `pip install -r requirements.txt`
+2. Create a virtual environment (choose one):
+   - **uv** (faster): `uv venv` then `uv pip install -r requirements.txt`
+   - **venv** — Windows: `python -m venv .venv` then `.venv\\Scripts\\activate`
+   - **venv** — macOS/Linux: `python3 -m venv .venv` then `source .venv/bin/activate`
+3. If using venv (not uv), install: `pip install -r requirements.txt`
 4. Copy `.env.example` to `.env`.
 5. Get a Groq API key from https://console.groq.com/ and put it in `.env`.
-6. Run: `streamlit run app.py`
+6. Run: `streamlit run app.py` (or `uv run streamlit run app.py` if using uv)
 7. Open the local Streamlit address and start chatting.
 
 ---
